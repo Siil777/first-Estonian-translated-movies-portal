@@ -1,6 +1,7 @@
-/node_modules/
-/.idea/
-/src/
-/gulpfile.js/
-/readme.md/
-/essentials/
+node_modules/
+.idea/
+src/
+gulpfile.js
+readme.md
+essentials/
+
