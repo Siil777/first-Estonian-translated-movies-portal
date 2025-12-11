@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Главная</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> 
+
+</head>
+<body>
+       <nav class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+           <div class="relative flex h-16 items-center justify-between">
+             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+               <!-- Mobile menu button-->
+               <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                 <span class="absolute -inset-0.5"></span>
+                 <span class="sr-only">Open main menu</span>
+                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                   <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                 </svg>
+                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                   <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                 </svg>
+               </button>
+             </div>
+             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+               <div class="flex shrink-0 items-center">
+                 <img src="images/circle-number-1-svgrepo-com.svg" alt="Your Company" class="h-8 w-auto" />
+               </div>
+               <div class="hidden sm:ml-6 sm:block">
+                 <div class="flex space-x-4">
+                   <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                   <a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Kinover</a>
+                   <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Estonia’s first platform for globally translated movies in Estonian</a>
+                   <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">co-operation</a>
+                 </div>
+               </div>
+             </div>
+             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+               <button type="button" class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+                 <span class="absolute -inset-1.5"></span>
+                 <span class="sr-only">View notifications</span>
+                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                   <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" stroke-linecap="round" stroke-linejoin="round" />
+                 </svg>
+               </button>
+       
+               <!-- Profile dropdown -->
+               <el-dropdown class="relative ml-3">
+                 <button class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                   <span class="absolute -inset-1.5"></span>
+                   <span class="sr-only">Open user menu</span>
+                   <img src="images/fartune.png" alt="" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+                 </button>
+       
+                 <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                   <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Your profile</a>
+                   <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Settings</a>
+                   <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Sign out</a>
+                 </el-menu>
+               </el-dropdown>
+             </div>
+           </div>
+         </div>
+       
+         <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+           <div class="space-y-1 px-2 pt-2 pb-3">
+             <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+             <a href="#" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Kinover</a>
+             <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Get in team</a>
+             <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">UI of possible project</a>
+             <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+           </div>
+         </el-disclosure>
+       </nav>
+          <body class="antialiased">
+                  <section id="home" class="relative pt-20 pb-28 text-center overflow-hidden bg-black">  
+                      <div class="relative max-w-4xl mx-auto px-4">
+                          <h1 class="text-5xl sm:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                              Check it out best movies in Estonian translation
+                          </h1>
+                          <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                              A collection of fine movies
+                          </p>
+                          <a href="#portfolio" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition duration-300 shadow-xl shadow-indigo-500/30">
+                              View the Collection
+                          </a>
+                      </div>
+                  </section>
+       
+                  <section id="portfolio" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                      <h2 class="text-4xl font-bold text-center mb-12 text-info">Enjoy the unique prodaction</h2>
+          
+                      <div class="custom-height grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                          <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                                <p class="text-body"><a href="https://youtu.be/gjwL58iCpiw" class=" mt-2 inline-flex items-center justify-center d-flex text-white font-medium text-secondary hover:underline">
+                               Trailer
+                               <svg class="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+                               </a>
+                               </p>
+                              <div class="image-fluid h-64 md:h-72 lg:h-80">
+                                  <img  data-modal-id="index-1" src="images/EstonianPredator.png" alt="Majestic Landscape" loading="lazy" class="w-full h-full object-cover">
+                              </div>
+                              <div class="p-6">
+                                  <h3 class="text-xl font-semibold mb-2 text-indigo-400">kinover present</h3>
+                                  <p class="text-gray-400 text-sm">Predator bad lands</p>
+                              </div>
+                           
+                          </div>
+                          <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                               <p class="text-body"><a href="https://youtu.be/kNF4zY7o_E4" class=" mt-2 inline-flex items-center justify-center d-flex text-white font-medium text-secondary hover:underline">
+                               Trailer
+                               <svg class="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+                               </a>
+                               </p>
+                              <div class="image-fluid h-64 md:h-72 lg:h-80">
+                                  <img data-modal-id="index-2" src="images/inception.jpg" alt="Dramatic Portrait" loading="lazy" class="w-full h-full object-cover">
+                              </div>
+                              <div class="p-6">
+                                  <h3 class="text-xl font-semibold mb-2 text-indigo-400">kinover present</h3>
+                                  <p class="text-gray-400 text-sm">Inception 2010 Sci-fi/Action</p>
+                              </div>
+                          </div>
+          
+                          <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                                <p class="text-body"><a href="https://youtu.be/uweoPRUWIjM" class=" mt-2 inline-flex items-center justify-center d-flex text-white font-medium text-secondary hover:underline">
+                               Trailer
+                               <svg class="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+                               </a>
+                               </p>
+                              <div class="img-fluid h-64 md:h-72 lg:h-80">
+                                  <img data-modal-id="index-3" src="images/Reign_of_Blood.png" alt="Wildlife in Motion" loading="lazy" class="w-full h-full object-cover">
+                              </div>
+                              <div class="p-6">
+                                  <h3 class="text-xl font-semibold mb-2 text-indigo-400">kinover present</h3>
+                                  <p class="text-gray-400 text-sm">Rome reign of blood</p>
+                              </div>
+                          </div>
+          
+          
+                          <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                                <p class="text-body"><a href="https://youtu.be/kNF4zY7o_E4" class=" mt-2 inline-flex items-center justify-center d-flex text-white font-medium text-secondary hover:underline">
+                               Trailer
+                               <svg class="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+                               </a>
+                               </p>
+                              <div class="img-fluid h-64 md:h-72 lg:h-80">
+                                  <img data-modal-id="index-4" src="images/sawX.jpg" alt="Modern Architecture" loading="lazy" class="w-full h-full object-cover">
+                              </div>
+                              <div class="p-6">
+                                  <h3 class="text-xl font-semibold mb-2 text-indigo-400">kinover present</h3>
+                                  <p class="text-gray-400 text-sm">Saw X</p>
+                              </div>
+                          </div>
+          
+                          <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                                <p class="text-body"><a href="https://youtu.be/kNF4zY7o_E4" class=" mt-2 inline-flex items-center justify-center d-flex text-white font-medium text-secondary hover:underline">
+                               Trailer
+                               <svg class="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+                               </a>
+                               </p>
+                              <div class="img-fluid h-64 md:h-72 lg:h-80">
+                                  <img data-modal-id="index-5" src="images/AlienEarth.jpg" alt="Gourmet Dish" loading="lazy" class="w-full h-full object-cover">
+                              </div>
+                              <div class="p-6">
+                                  <h3 class="text-xl font-semibold mb-2 text-indigo-400">kinover present</h3>
+                                  <p class="text-gray-400 text-sm">Alien Earth</p>
+                              </div>
+                          </div>
+          
+                          
+                          <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                                <p class="text-body"><a href="https://youtu.be/kNF4zY7o_E4" class=" mt-2 inline-flex items-center justify-center d-flex text-white font-medium text-secondary hover:underline">
+                               Trailer
+                               <svg class="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+                               </a>
+                               </p>
+                              <div class="img-fluid h-64 md:h-72 lg:h-80">
+                                  <img data-modal-id="index-6" src="images/romul.jpg" alt="Candid Moment" loading="lazy" class="w-full h-full object-cover">
+                              </div>
+                              <div class="p-6">
+                                  <h3 class="text-xl font-semibold mb-2 text-indigo-400">kinover present</h3>
+                                  <p class="text-gray-400 text-sm">Alien Romul</p>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+    <div class="bg-gray-900 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 class="text-center text-lg/8 font-semibold text-white">Oliver Cassius 2025</h2>
+            <div
+                class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                <img width="158" height="48" src="images/zoom-svgrepo-com.svg" alt="Transistor"
+                    class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
+    
+                <img width="158" height="48" src="images/github-svgrepo-com.svg" alt="Reform"
+                    class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
+    
+                <img width="158" height="48" src="images/ampersand-svgrepo-com.svg" alt="Tuple"
+                    class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
+    
+                <img width="158" height="48" src="images/browserslist-svgrepo-com.svg" alt="SavvyCal"
+                    class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" />
+    
+                <img width="158" height="48" src="images/angellist-svgrepo-com.svg" alt="Statamic"
+                    class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" />
+            </div>
+        </div>
+    </div>
+    <script src="js/app-min.js"></script>
+</body>
+</html>
